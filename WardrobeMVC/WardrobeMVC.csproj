@@ -219,6 +219,29 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\black and white dotted button up.jpg" />
+    <Content Include="Content\images\black and white flannel.jpg" />
+    <Content Include="Content\images\black flats.jpg" />
+    <Content Include="Content\images\black jeans.jpg" />
+    <Content Include="Content\images\black pants.jpg" />
+    <Content Include="Content\images\black running tights.jpg" />
+    <Content Include="Content\images\black scarf.jpg" />
+    <Content Include="Content\images\black shorts.jpg" />
+    <Content Include="Content\images\black skirt.jpg" />
+    <Content Include="Content\images\black sleeveless blouse.jpg" />
+    <Content Include="Content\images\black sweater.jpg" />
+    <Content Include="Content\images\black trumpet-sleeve blouse.jpg" />
+    <Content Include="Content\images\jeans.jpg" />
+    <Content Include="Content\images\nike.png" />
+    <Content Include="Content\images\pink ankle boots.jpg" />
+    <Content Include="Content\images\pink button up.jpg" />
+    <Content Include="Content\images\sneakers.jpg" />
+    <Content Include="Content\images\sunglasses.jpg" />
+    <Content Include="Content\images\tan ankle boots.jpg" />
+    <Content Include="Content\images\tan sandals.jpg" />
+    <Content Include="Content\images\white button up blouse.jpg" />
+    <Content Include="Content\images\white sleeveless blouse.jpg" />
+    <Content Include="Content\images\white tee.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -321,7 +344,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
