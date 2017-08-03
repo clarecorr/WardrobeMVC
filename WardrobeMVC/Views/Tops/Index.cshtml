@@ -9,7 +9,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+@*<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.TopName)
@@ -30,10 +30,28 @@
             @Html.DisplayNameFor(model => model.Season.SeasonName)
         </th>
         <th></th>
-    </tr>
+    </tr>*@
 
-@foreach (var item in Model) {
-    <tr>
+@foreach (var item in Model)
+{
+
+        <div class="col-sm-6 col-md-3">
+            <div class="thumbnail indexThumbnail">
+                <img src="@Html.DisplayFor(modelItem => item.TopPhoto)" />
+                <div class="caption">
+                    <h3>@Html.DisplayFor(modelItem => item.TopName)</h3>
+                    <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.TopID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.TopID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.TopID })
+                    </p>
+                </div>
+            </div>
+        </div>
+
+}
+
+    @*<tr>
         <td>
             @Html.DisplayFor(modelItem => item.TopName)
         </td>
@@ -60,4 +78,4 @@
     </tr>
 }
 
-</table>
+</table>*@
