@@ -28,6 +28,15 @@ textarea {
 img {
     width: 100px;
 }
+
+/*Thumbnail styling*/
 .indexThumbnail {
     text-align: center;
+    border: none;
+}
+
+/*Navbar styling*/
+.navv {
+    background-image: url('images/wall4.png');
+    background-size: cover;
 }
