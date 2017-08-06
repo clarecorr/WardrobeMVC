@@ -4,78 +4,43 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 style="text-align:center; padding-bottom:25px;">Tops</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-@*<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.TopName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TopPhoto)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TopType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TopColor)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Occasion.OccasionName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Season.SeasonName)
-        </th>
-        <th></th>
-    </tr>*@
 
+@*<div class="row">*@
 @foreach (var item in Model)
 {
-
-        <div class="col-sm-6 col-md-3">
-            <div class="thumbnail indexThumbnail">
-                <img src="@Html.DisplayFor(modelItem => item.TopPhoto)" />
-                <div class="caption">
-                    <h3>@Html.DisplayFor(modelItem => item.TopName)</h3>
-                    <p>
+    <div class="col-sm-6 col-md-3">
+        <div class="thumbnail indexThumbnail">
+            <img src="@Html.DisplayFor(modelItem => item.TopPhoto)" />
+            <div class="caption">
+                <h3>@Html.DisplayFor(modelItem => item.TopName)</h3>
+                <p>
                     @Html.ActionLink("Edit", "Edit", new { id = item.TopID }) |
                     @Html.ActionLink("Details", "Details", new { id = item.TopID }) |
                     @Html.ActionLink("Delete", "Delete", new { id = item.TopID })
-                    </p>
-                </div>
+                </p>
             </div>
         </div>
-
+    </div>
 }
+@*</div>*@
 
-    @*<tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TopName)
-        </td>
-        <td>
-           <img src="@Html.DisplayFor(modelItem => item.TopPhoto)" />
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TopType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TopColor)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Occasion.OccasionName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Season.SeasonName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.TopID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.TopID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.TopID })
-        </td>
-    </tr>
-}
 
-</table>*@
+    <div class="col-sm-6 col-md-3">
+        <div class="thumbnail indexThumbnail">
+            <img src="~/Content/images/hanger.jpg" />
+            <div class="caption">
+                <h3>Add a new top</h3>
+                <p>
+                    @Html.ActionLink("Add", "Create")
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+@*Used button to navigate to create page*@
+@*<div class="row">
+        <p><a href="Create" class="btn btn-primary butt" role="button">Add a new top</a></p>
+    </div>*@

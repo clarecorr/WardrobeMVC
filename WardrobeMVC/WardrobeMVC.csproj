@@ -231,10 +231,14 @@
     <Content Include="Content\images\black sleeveless blouse.jpg" />
     <Content Include="Content\images\black sweater.jpg" />
     <Content Include="Content\images\black trumpet-sleeve blouse.jpg" />
+    <Content Include="Content\images\Dark-Asfalt-Pattern-for-Website-Background.jpg" />
+    <Content Include="Content\images\Grunge-Seamless-Pattern-For-Website-Background.jpg" />
+    <Content Include="Content\images\hanger.jpg" />
     <Content Include="Content\images\jeans.jpg" />
     <Content Include="Content\images\nike.png" />
     <Content Include="Content\images\pink ankle boots.jpg" />
     <Content Include="Content\images\pink button up.jpg" />
+    <Content Include="Content\images\S3CsEBc.jpg" />
     <Content Include="Content\images\sneakers.jpg" />
     <Content Include="Content\images\sunglasses.jpg" />
     <Content Include="Content\images\tan ankle boots.jpg" />
@@ -243,6 +247,7 @@
     <Content Include="Content\images\white button up blouse.jpg" />
     <Content Include="Content\images\white sleeveless blouse.jpg" />
     <Content Include="Content\images\white tee.jpg" />
+    <Content Include="Content\images\white tee1.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

@@ -37,6 +37,17 @@ img {
 
 /*Navbar styling*/
 .navv {
-    background-image: url('images/wall4.png');
-    background-size: cover;
+    /*background-image: url('images/wall4.png');*/
+    /*background-image: url('images/S3CsEBc.jpg');*/
+    /*background-image: url('images/grunge-seamless-pattern-for-website-background.jpg');*/
+    background-image: url('images/Dark-Asfalt-Pattern-for-Website-Background.jpg');
+    border:none;
+}
+.navbar-brand {
+    font-size:25px;
+}
+
+/*Button styling*/
+.butt {
+    
 }

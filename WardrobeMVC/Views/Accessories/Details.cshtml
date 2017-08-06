@@ -4,63 +4,21 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<div style="text-align:center">
+    <h4><img src="@Html.DisplayFor(model => model.AccessoryPhoto)" /></h4>
 
-<div>
-    <h4>Accessory</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.AccessoryName)
-        </dt>
+    <h3>@Html.DisplayFor(model => model.AccessoryName)</h3>
 
-        <dd>
-            @Html.DisplayFor(model => model.AccessoryName)
-        </dd>
+    <h5>Type: @Html.DisplayFor(model => model.AccessoryType)</h5>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.AccessoryPhoto)
-        </dt>
+    <h5>Color: @Html.DisplayFor(model => model.AccessoryColor)</h5>
 
-        <dd>
-            <img src="@Html.DisplayFor(model => model.AccessoryPhoto)" />
-        </dd>
+    <h5>Occassion: @Html.DisplayFor(model => model.Occasion.OccasionName)</h5>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.AccessoryType)
-        </dt>
+    <h5>Season: @Html.DisplayFor(model => model.Season.SeasonName)</h5>
 
-        <dd>
-            @Html.DisplayFor(model => model.AccessoryType)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AccessoryColor)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AccessoryColor)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Occasion.OccasionName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Occasion.OccasionName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Season.SeasonName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Season.SeasonName)
-        </dd>
-
-    </dl>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.AccessoryID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.AccessoryID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

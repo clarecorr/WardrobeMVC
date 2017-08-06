@@ -8,22 +8,24 @@
     @Scripts.Render("~/bundles/modernizr")
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Quicksand" rel="stylesheet">
 </head>
-<body style="font-family: 'Quicksand', sans-serif;">
+<body style="font-family: 'Quicksand', sans-serif; ">
+<body style="font-family: 'Quicksand', sans-serif; color:#e4eafb">
     <div class="navbar navbar-inverse navbar-fixed-top navv">
         <div class="container">
-            <div class="navbar-header">
+            <div class="navbar-header" style="font-family: 'Pacifico', cursive;">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Virtual Wardrobe", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("TOPS", "Index", "Tops")</li>
+                    <li>@Html.ActionLink("BOTTOMS", "Index", "Bottoms")</li>
+                    <li>@Html.ActionLink("SHOES", "Index", "Shoes")</li>
+                    <li>@Html.ActionLink("ACCESSORIES", "Index", "Accessories")</li>
                 </ul>
             </div>
         </div>

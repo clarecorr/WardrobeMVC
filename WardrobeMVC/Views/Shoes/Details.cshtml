@@ -4,63 +4,22 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<div style="text-align:center">
+    <h4><img src="@Html.DisplayFor(model => model.ShoePhoto)" /></h4>
 
-<div>
-    <h4>Sho</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ShoeName)
-        </dt>
+    <h3>@Html.DisplayFor(model => model.ShoeName)</h3>
 
-        <dd>
-            @Html.DisplayFor(model => model.ShoeName)
-        </dd>
+    <h5>Type: @Html.DisplayFor(model => model.ShoeType)</h5>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ShoePhoto)
-        </dt>
+    <h5>Color: @Html.DisplayFor(model => model.ShoeColor)</h5>
 
-        <dd>
-            <img src="@Html.DisplayFor(model => model.ShoePhoto)" />
-        </dd>
+    <h5>Occassion: @Html.DisplayFor(model => model.Occasion.OccasionName)</h5>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ShoeType)
-        </dt>
+    <h5>Season: @Html.DisplayFor(model => model.Season.SeasonName)</h5>
 
-        <dd>
-            @Html.DisplayFor(model => model.ShoeType)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ShoeColor)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ShoeColor)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Occasion.OccasionName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Occasion.OccasionName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Season.SeasonName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Season.SeasonName)
-        </dd>
-
-    </dl>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ShoeID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ShoeID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
