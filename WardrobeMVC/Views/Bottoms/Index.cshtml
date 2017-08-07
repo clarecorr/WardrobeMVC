@@ -4,60 +4,35 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 style="text-align:center; padding-bottom:25px;">Bottoms</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.BottomName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BottomPhoto)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BottomType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BottomColor)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Occasion.OccasionName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Season.SeasonName)
-        </th>
-        <th></th>
-    </tr>
+<div class="col-sm-6 col-md-3">
+    <div class="thumbnail indexThumbnail" style="padding-top:50px">
+        <img src="~/Content/images/hanger.jpg" />
+        <div class="caption" style="padding-top:45px">
+            <h3>New Bottom</h3>
+            <p>
+                @Html.ActionLink("Add Bottom", "Create")
+            </p>
+        </div>
+    </div>
+</div>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.BottomName)
-        </td>
-        <td>
+
+@foreach (var item in Model)
+{
+    <div class="col-sm-6 col-md-3">
+        <div class="thumbnail indexThumbnail">
             <img src="@Html.DisplayFor(modelItem => item.BottomPhoto)" />
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BottomType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BottomColor)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Occasion.OccasionName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Season.SeasonName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.BottomID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.BottomID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.BottomID })
-        </td>
-    </tr>
+            <div class="caption">
+                <h3>@Html.DisplayFor(modelItem => item.BottomName)</h3>
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.BottomID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.BottomID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.BottomID })
+                </p>
+            </div>
+        </div>
+    </div>
 }
 
-</table>

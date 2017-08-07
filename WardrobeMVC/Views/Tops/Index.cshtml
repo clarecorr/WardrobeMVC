@@ -6,8 +6,19 @@
 
 <h2 style="text-align:center; padding-bottom:25px;">Tops</h2>
 
+<div class="col-sm-6 col-md-3">
+    <div class="thumbnail indexThumbnail" style="padding-top:50px">
+        <img src="~/Content/images/hanger.jpg" />
+        <div class="caption" style="padding-top:45px">
+            <h3>New Top</h3>
+            <p>
+                @Html.ActionLink("Add Top", "Create")
+            </p>
+        </div>
+    </div>
+</div>
 
-@*<div class="row">*@
+
 @foreach (var item in Model)
 {
     <div class="col-sm-6 col-md-3">
@@ -24,23 +35,8 @@
         </div>
     </div>
 }
-@*</div>*@
 
 
-    <div class="col-sm-6 col-md-3">
-        <div class="thumbnail indexThumbnail">
-            <img src="~/Content/images/hanger.jpg" />
-            <div class="caption">
-                <h3>Add a new top</h3>
-                <p>
-                    @Html.ActionLink("Add", "Create")
-                </p>
-            </div>
-        </div>
-    </div>
 
 
-@*Used button to navigate to create page*@
-@*<div class="row">
-        <p><a href="Create" class="btn btn-primary butt" role="button">Add a new top</a></p>
-    </div>*@
+

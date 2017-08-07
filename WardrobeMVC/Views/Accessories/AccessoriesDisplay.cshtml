@@ -1,7 +1,23 @@
-﻿
+﻿@model IEnumerable<WardrobeMVC.Models.Accessory>
+
 @{
-    ViewBag.Title = "AccessoriesDisplay";
+    ViewBag.Title = "Index";
 }
 
-<h2>AccessoriesDisplay</h2>
+@foreach (var item in Model)
+{
+    <div class="col-sm-6 col-md-3">
+        <div class="thumbnail indexThumbnail">
+            <img src="@Html.DisplayFor(modelItem => item.AccessoryPhoto)" />
+            <div class="caption">
+                <h3>@Html.DisplayFor(modelItem => item.AccessoryName)</h3>
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.AccessoryID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.AccessoryID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.AccessoryID })
+                </p>
+            </div>
+        </div>
+    </div>
+}
 

@@ -4,60 +4,34 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 style="text-align:center; padding-bottom:25px;">Accessories</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.AccessoryName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AccessoryPhoto)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AccessoryType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AccessoryColor)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Occasion.OccasionName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Season.SeasonName)
-        </th>
-        <th></th>
-    </tr>
+<div class="col-sm-6 col-md-3">
+    <div class="thumbnail indexThumbnail" style="padding-top:50px">
+        <img src="~/Content/images/hanger.jpg" />
+        <div class="caption" style="padding-top:45px">
+            <h3>New Accessory</h3>
+            <p>
+                @Html.ActionLink("Add Accessory", "Create")
+            </p>
+        </div>
+    </div>
+</div>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.AccessoryName)
-        </td>
-        <td>
+
+@foreach (var item in Model)
+{
+    <div class="col-sm-6 col-md-3">
+        <div class="thumbnail indexThumbnail">
             <img src="@Html.DisplayFor(modelItem => item.AccessoryPhoto)" />
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AccessoryType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AccessoryColor)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Occasion.OccasionName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Season.SeasonName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.AccessoryID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.AccessoryID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.AccessoryID })
-        </td>
-    </tr>
+            <div class="caption">
+                <h3>@Html.DisplayFor(modelItem => item.AccessoryName)</h3>
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.AccessoryID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.AccessoryID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.AccessoryID })
+                </p>
+            </div>
+        </div>
+    </div>
 }
-
-</table>

@@ -1,3 +1,52 @@
 ﻿
-<h2>Completed Tasks</h2>
-@Html.Partial("~/Views/Tops/TopsDisplay.cshtml")
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="col-sm-6 col-md-3">
+    <div class="thumbnail indexThumbnail" style="padding-top:50px">
+        <img src="~/Content/images/white tee.jpg" />
+        <div class="caption" style="padding-top:45px">
+            <h3>Tops</h3>
+            <p>
+                @Html.ActionLink("Checkout Tops", "Tops", "Index")
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-6 col-md-3">
+    <div class="thumbnail indexThumbnail" style="padding-top:50px">
+        <img src="~/Content/images/black jeans.jpg" />
+        <div class="caption" style="padding-top:45px">
+            <h3>Bottoms</h3>
+            <p>
+                @Html.ActionLink("Checkout Bottoms", "Bottoms", "Index")
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-6 col-md-3">
+    <div class="thumbnail indexThumbnail" style="padding-top:50px">
+        <img src="~/Content/images/beige flats.jpg" />
+        <div class="caption" style="padding-top:45px">
+            <h3>Shoes</h3>
+            <p>
+                @Html.ActionLink("Checkout Shoes", "Shoes", "Index")
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-6 col-md-3">
+    <div class="thumbnail indexThumbnail" style="padding-top:50px">
+        <img src="~/Content/images/pink purse.jpg" />
+        <div class="caption" style="padding-top:45px">
+            <h3>Accessories</h3>
+            <p>
+                @Html.ActionLink("Checkout Accessories", "Tops", "Accessories")
+            </p>
+        </div>
+    </div>
+</div>
